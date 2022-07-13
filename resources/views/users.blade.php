@@ -37,7 +37,7 @@
 							<h4 class="card-title">POST</h4>
 
 							<form action="/users" method="POST">
-								
+
 								@csrf
 								<div class="mb-3">
 									<label for="" class="form-label">Nombre</label>

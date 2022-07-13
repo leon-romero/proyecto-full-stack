@@ -10,6 +10,17 @@ Route::get('home','HomeController@index')->name('home.index');
 
 Route::get('/api/v1/externa','Auth\AuthController@extena');
 
+Route::get('/api/vehiculos','Api\VehiculoController@index');
+Route::get('/api/vehiculos/{id}','Api\VehiculoController@show');
+
+Route::get('/telefonos','TelefonoController@index');
+Route::get('/telefonos_web','TelefonoController@indexWeb');
+
+Route::get('/ricks','TelefonoController@rick');
+
+
+// Route::resource('/api/productos','Api\ProductoController');
+
 
 // Route::get('posts','PostController@index')->name('posts.index');
 

@@ -7,42 +7,17 @@
     <div class="row">
         <div class="col-md-12">
 
-            <div class="card">
-                <div class="card-body shadow">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Text</p>
-                    <table  id="tabla_user" class="table table-hover table-sm">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Email</th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($users as $u)
-                                <tr>
-                                    <td scope="row">{{ $u->id }}</td>
-                                    <td>{{ $u->name }}</td>
-                                    <td>{{ $u->email }}</td>
-                                    <td>
-                                        <a href="{{ route('users.show', $u->id) }}" class="btn btn-sm btn-success">Editar</a>
-                                    </td>
-                                    <td>
-                                        <form action="{{ route('users.destroy', $u->id) }}" method="post">
-                                            @method('delete')
-                                            <button type="submit" class="btn btn-sm btn-danger">Elminar</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            @endforeach
+            @foreach ($collection as $item)
 
-                        </tbody>
-                    </table>
+            @endforeach
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
-            </div>
+              </div>
 
         </div>
     </div>
